@@ -18,5 +18,11 @@ namespace PlaceTagv0._1
             InitializeComponent();
         }
 
+        private void Place_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ManagePlaces/GetPlace.xaml", UriKind.Relative));
+        }
+
+
     }
 }

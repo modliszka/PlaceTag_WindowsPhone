@@ -101,6 +101,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManagePlaces\GetPlace.xaml.cs">
+      <DependentUpon>GetPlace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePlaces\EditPlace.xaml.cs">
+      <DependentUpon>EditPlace.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ManagePlaces\AllPlaces.xaml.cs">
       <DependentUpon>AllPlaces.xaml</DependentUpon>
     </Compile>
@@ -122,6 +128,14 @@
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManagePlaces\GetPlace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ManagePlaces\EditPlace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ManagePlaces\AllPlaces.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -158,6 +172,7 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="PicturesOfPlaces\p1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
