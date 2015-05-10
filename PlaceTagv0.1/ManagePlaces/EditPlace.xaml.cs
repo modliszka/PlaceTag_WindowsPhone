@@ -8,7 +8,6 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using PlaceTagv0._1.Resources;
-using Databases;
 
 namespace PlaceTagv0._1
 {
@@ -19,9 +18,9 @@ namespace PlaceTagv0._1
             InitializeComponent();
         }
 
-        private void appBarSaveButton_Click(object sender, RoutedEventArgs e)
+        private void appBarSaveButton_Click(object sender, EventArgs e)
         {
-            var id = 1;
+            /*var id = 1;
             String nam = name.Text;
             String desc = description.Text;
             String cit = city.Text;
@@ -29,7 +28,7 @@ namespace PlaceTagv0._1
             String strtNo = streetNumber.Text;
             DatabaseUpdate edit = new DatabaseUpdate();
             if (!String.IsNullOrEmpty(nam) && !String.IsNullOrEmpty(desc))
-                edit.UpdatePlace(id, nam, desc,cit,strt,strtNo);
+                edit.UpdatePlace(id, nam, desc,cit,strt,strtNo);*/
         }
 
         private void appBarCancelButton_Click(object sender, EventArgs e)

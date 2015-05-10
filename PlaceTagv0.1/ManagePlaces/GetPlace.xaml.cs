@@ -8,7 +8,6 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using PlaceTagv0._1.Resources;
-using Databases;
 
 namespace PlaceTagv0._1
 {
@@ -19,7 +18,7 @@ namespace PlaceTagv0._1
             InitializeComponent();
         }
 
-        private void newPlaceBarButton_Click(object sender, RoutedEventArgs e)
+        private void newPlaceBarButton_Click(object sender, EventArgs e) //routedEventArgs - roznica?
         {
             NavigationService.Navigate(new Uri("/ManagePlaces/EditPlace.xaml", UriKind.Relative));
         }

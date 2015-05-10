@@ -16,13 +16,13 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton 
-                IconUri="/Images/Toolkit.Content/ApplicationBar.Select.png" 
+                IconUri="/Images/edit.png" 
                 Text="edit" 
                 x:Name="newPlaceAppBarButton" 
                 Click="newPlaceBarButton_Click"/>
 
             <shell:ApplicationBarIconButton                                 
-                IconUri="/Images/Toolkit.Content/ApplicationBar.Delete.png" 
+                IconUri="/Images/delete.png" 
                 Text="delete" 
                 x:Name="deletePlaceAppBarButton" 
                 Click="deletePlaceBarButton_Click"/>

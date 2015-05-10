@@ -16,26 +16,28 @@
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="PlaceListBoxItemTemplate">
-            <Grid Margin="12,0,0,24" HorizontalAlignment="Stretch" Width="420">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="100" />
-                </Grid.ColumnDefinitions>
-                <CheckBox 
+            <Button Margin="12,0,0,24" BorderThickness="0" Click="place_Click">
+                <Grid HorizontalAlignment="Stretch" Width="420">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox 
                     IsChecked="{Binding IsComplete, Mode=TwoWay}" 
                     Grid.Column="0" VerticalAlignment="Top"/>
-                <Border Background="Red"/>
-                <Grid Grid.Column="1" Width="100" Height="100" VerticalAlignment="Top">
-                    <Border BorderBrush="Black" BorderThickness="1" Background="{StaticResource PhoneContrastBackgroundBrush}" Opacity="0.1"/>
-                    <Image Source="{Binding Photo}"/>
+                    <Border Background="Red"/>
+                    <Grid Grid.Column="1" Width="100" Height="100" VerticalAlignment="Top">
+                        <Border BorderBrush="Black" BorderThickness="1" Background="{StaticResource PhoneContrastBackgroundBrush}" Opacity="0.1"/>
+                        <Image Source="{Binding Photo}"/>
+                    </Grid>
+                    <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0,-6">
+                        <TextBlock Text="{Binding PlaceName}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" MaxHeight="82"/>
+                        <!--TextBlock Text="{Binding DefectType}" Style="{StaticResource PhoneTextSubtleStyle}"/-->
+                    </StackPanel>
                 </Grid>
-                <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0,-6">
-                    <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" MaxHeight="82"/>
-                    <TextBlock Text="{Binding DefectType}" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                </StackPanel>
-            </Grid>
+            </Button>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
 
@@ -43,14 +45,14 @@
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
 
             <shell:ApplicationBarIconButton 
-                IconUri="/Images/Toolkit.Content/ApplicationBar.Add.png" 
+                IconUri="/Images/add.png" 
                 Text="add" 
                 x:Name="newPlaceAppBarButton" 
                 Click="newPlaceBarButton_Click"/>
 
             <shell:ApplicationBarIconButton                                 
-                IconUri="/Images/Toolkit.Content/ApplicationBar.Delete.png" 
-                Text="add" 
+                IconUri="/Images/delete.png" 
+                Text="delete" 
                 x:Name="deletePlaceAppBarButton" 
                 Click="deletePlaceBarButton_Click"/>
             
@@ -73,31 +75,15 @@
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox ItemTemplate="{StaticResource PlaceListBoxItemTemplate}" ItemsSource="{Binding Places}">
-                <Button Margin="12,0,0,24" BorderThickness="0" Click="Place_Click">
-                    <Grid x:Name="place" >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="12"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <CheckBox 
-                            IsChecked="{Binding IsComplete, Mode=TwoWay}" 
-                            Grid.Column="0" VerticalAlignment="Top"/>
-                        <Border Background="Red"/>
-                        <Grid Grid.Column="1" Width="100" Height="100" VerticalAlignment="Top">
-                            <Border BorderBrush="Black" BorderThickness="1" Background="{StaticResource PhoneContrastBackgroundBrush}" Opacity="0.1"/>
-                            <Image Source="/PictureOfPlaces/p1.jpg"/>
-                        </Grid>
-                        <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0,-6">
-                            <TextBlock Text="Miejsce nr 1" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" MaxHeight="82"/>
-                            <TextBlock Text="Jakiś tam opis tego miejsca" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                            <TextBlock Text="Miejscowość, ulica" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                        </StackPanel>
-                    </Grid>
-                </Button >
-            </ListBox>
+            <controls:Pivot Margin="0, -36, 0, 0">
+                <controls:PivotItem><!-- Header="all"-->
+                    <ListBox 
+                        x:Name="allPlacesListBox" 
+                        ItemsSource="{Binding AllPlaces}" 
+                        Margin="12, 0, 12, 0" Width="440" 
+                        ItemTemplate="{StaticResource PlaceListBoxItemTemplate}" />
+                </controls:PivotItem>
+            </controls:Pivot>
         </Grid>
 
     </Grid>

@@ -8,6 +8,10 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using PlaceTagv0._1.Resources;
 
+// Directives
+using PlaceTagv0._1.Model;
+using PlaceTagv0._1.ViewModel;
+
 namespace PlaceTagv0._1
 {
     public partial class App : Application
@@ -17,6 +21,14 @@ namespace PlaceTagv0._1
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
+
+        // The static ViewModel, to be used across the application.
+        private static PlaceViewModel viewModel;
+        public static PlaceViewModel ViewModel
+        {
+            get { return viewModel; }
+        }
+
 
         /// <summary>
         /// Constructor for the Application object.
@@ -54,6 +66,31 @@ namespace PlaceTagv0._1
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+
+            // Specify the local database connection string.
+            string DBConnectionString = "Data Source=isostore:/Places.sdf";
+
+            // Create the database if it does not exist.
+            using (PlaceDataContext db = new PlaceDataContext(DBConnectionString))
+            {
+                if (db.DatabaseExists() == false)
+                {
+                    // Create the local database.
+                    db.CreateDatabase();
+
+                    // Prepopulate the places.
+                    db.Places.InsertOnSubmit(new PlaceDetails { PlaceName = "Miejsce nr 1" }); // Jakiś tam opis tego miejsca | Miejscowość, ulica | /PictureOfPlaces/p1.jpg
+
+                    // Save categories to the database.
+                    db.SubmitChanges();
+                }
+            }
+
+            // Create the ViewModel object.
+            viewModel = new PlaceViewModel(DBConnectionString);
+
+            // Query the local database and load observable collections.
+            viewModel.LoadCollectionsFromDatabase();
 
         }
 

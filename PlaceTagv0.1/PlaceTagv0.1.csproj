@@ -93,9 +93,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Database\DatabaseAdd.cs" />
-    <Compile Include="Database\DatabaseDelete.cs" />
-    <Compile Include="Database\DatabaseUpdate.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -119,6 +116,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\PlaceViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -178,6 +176,7 @@
     <Content Include="Images\check.png" />
     <Content Include="Images\delete.png" />
     <Content Include="ImagesOfPlaces\p1.jpg" />
+    <Content Include="Images\edit.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Check.png" />
@@ -199,9 +198,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
