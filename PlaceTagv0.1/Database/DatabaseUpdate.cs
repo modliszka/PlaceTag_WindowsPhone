@@ -1,4 +1,4 @@
-﻿using PlaceTagv0._1.Database;
+﻿using PlaceTagv0._1.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +13,9 @@ namespace Databases
         {
             using (PlaceDataContext context = new PlaceDataContext(PlaceDataContext.DBConnectionString))
             {
-                IQueryable<Place_details> entityQuery = from c in context.Places where c.ID == id select c;
-                Place_details entityToUpdate = entityQuery.FirstOrDefault();
-                entityToUpdate.place_name = name;
+                IQueryable<PlaceDetails> entityQuery = from c in context.Places where c.PlaceId == id select c;
+                PlaceDetails entityToUpdate = entityQuery.FirstOrDefault();
+                entityToUpdate.PlaceName = name;
                 entityToUpdate.place_description = description;
                 entityToUpdate.place_city = city;
                 entityToUpdate.place_street = street;

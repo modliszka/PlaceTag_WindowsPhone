@@ -13,6 +13,23 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton 
+                IconUri="/Images/Toolkit.Content/ApplicationBar.Select.png" 
+                Text="edit" 
+                x:Name="newPlaceAppBarButton" 
+                Click="newPlaceBarButton_Click"/>
+
+            <shell:ApplicationBarIconButton                                 
+                IconUri="/Images/Toolkit.Content/ApplicationBar.Delete.png" 
+                Text="delete" 
+                x:Name="deletePlaceAppBarButton" 
+                Click="deletePlaceBarButton_Click"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -44,8 +61,6 @@
                 <TextBlock Text="Street number" 
                            TextWrapping="Wrap"
                            Margin="12,0,0,0"/>
-                <Button Content="Edit Place" Click="ButtonAdd_Click"/>
-                <Button Content="Remove Place" Click="ButtonRemove_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

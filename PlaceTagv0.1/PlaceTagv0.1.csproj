@@ -95,11 +95,13 @@
     </Compile>
     <Compile Include="Database\DatabaseAdd.cs" />
     <Compile Include="Database\DatabaseDelete.cs" />
-    <Compile Include="Database\DatabaseTables.cs" />
     <Compile Include="Database\DatabaseUpdate.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePlaces\DeletePlace.xaml.cs">
+      <DependentUpon>DeletePlace.xaml</DependentUpon>
     </Compile>
     <Compile Include="ManagePlaces\GetPlace.xaml.cs">
       <DependentUpon>GetPlace.xaml</DependentUpon>
@@ -107,12 +109,10 @@
     <Compile Include="ManagePlaces\EditPlace.xaml.cs">
       <DependentUpon>EditPlace.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManagePlaces\AllPlaces.xaml.cs">
-      <DependentUpon>AllPlaces.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ManagePlaces\AddPlace.xaml.cs">
       <DependentUpon>AddPlace.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\PlaceDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -129,15 +129,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ManagePlaces\DeletePlace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ManagePlaces\GetPlace.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ManagePlaces\EditPlace.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ManagePlaces\AllPlaces.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -147,6 +147,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
@@ -172,13 +173,34 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PicturesOfPlaces\p1.jpg" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\check.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="ImagesOfPlaces\p1.jpg" />
+    <Content Include="Images\Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Images\Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Images\Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Images\Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Images\Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

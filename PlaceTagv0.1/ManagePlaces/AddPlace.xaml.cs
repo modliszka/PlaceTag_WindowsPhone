@@ -19,7 +19,7 @@ namespace PlaceTagv0._1
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void appBarAddButton_Click(object sender, RoutedEventArgs e)
         {
             String nam = name.Text;
             String desc = description.Text;
@@ -30,5 +30,15 @@ namespace PlaceTagv0._1
             if (!String.IsNullOrEmpty(nam) && !String.IsNullOrEmpty(desc))
                 add.AddPlace(nam, desc,cit,strt,strtNo);
         }
+
+        private void appBarCancelButton_Click(object sender, EventArgs e)
+        {
+            // Return to the main page.
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
+        }
+
     }
 }

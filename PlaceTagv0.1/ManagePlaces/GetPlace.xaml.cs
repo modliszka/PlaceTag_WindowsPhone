@@ -19,13 +19,13 @@ namespace PlaceTagv0._1
             InitializeComponent();
         }
 
-        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        private void newPlaceBarButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/ManagePlaces/EditPlace.xaml", UriKind.Relative));
         }
-        private void ButtonRemove_Click(object sender, RoutedEventArgs e)
+        private void deletePlaceBarButton_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ManagePlaces/EditPlace.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/ManagePlaces/DeletePlace.xaml", UriKind.Relative));
         }
     }
 }

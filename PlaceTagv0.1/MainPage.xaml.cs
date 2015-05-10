@@ -17,19 +17,21 @@ namespace PlaceTagv0._1
         public MainPage()
         {
             InitializeComponent();
-
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Place_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ManagePlaces/GetPlace.xaml", UriKind.Relative));
+        }
+
+        private void newPlaceBarButton_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/ManagePlaces/AddPlace.xaml", UriKind.Relative));
         }
 
-        private void Button_Click1(object sender, RoutedEventArgs e)
+        private void deletePlaceBarButton_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ManagePlaces/AllPlaces.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/ManagePlaces/DeletePlace.xaml", UriKind.Relative));
         }
     }
 }

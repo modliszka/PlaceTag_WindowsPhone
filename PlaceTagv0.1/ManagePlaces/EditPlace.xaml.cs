@@ -19,7 +19,7 @@ namespace PlaceTagv0._1
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void appBarSaveButton_Click(object sender, RoutedEventArgs e)
         {
             var id = 1;
             String nam = name.Text;
@@ -30,6 +30,15 @@ namespace PlaceTagv0._1
             DatabaseUpdate edit = new DatabaseUpdate();
             if (!String.IsNullOrEmpty(nam) && !String.IsNullOrEmpty(desc))
                 edit.UpdatePlace(id, nam, desc,cit,strt,strtNo);
+        }
+
+        private void appBarCancelButton_Click(object sender, EventArgs e)
+        {
+            // Return to the main page.
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
         }
     }
 }

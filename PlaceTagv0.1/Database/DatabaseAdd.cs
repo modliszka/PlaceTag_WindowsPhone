@@ -1,4 +1,4 @@
-﻿using PlaceTagv0._1.Database;
+﻿using PlaceTagv0._1.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +13,8 @@ namespace Databases
         {
             using (PlaceDataContext context = new PlaceDataContext(PlaceDataContext.DBConnectionString))
             {
-                Place_details pd = new Place_details();
-                pd.place_name = name;
+                PlaceDetails pd = new PlaceDetails();
+                pd.PlaceName = name;
                 pd.place_description = description;
                 pd.place_city = city;
                 pd.place_street = street;
