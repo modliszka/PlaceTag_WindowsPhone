@@ -88,6 +88,15 @@ namespace PlaceTagv0._1.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to all places.
+        /// </summary>
+        public static string AppListBoxText {
+            get {
+                return ResourceManager.GetString("AppListBoxText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LeftToRight.
         /// </summary>
         public static string ResourceFlowDirection {

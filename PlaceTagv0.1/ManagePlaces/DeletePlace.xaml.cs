@@ -21,6 +21,19 @@ namespace PlaceTagv0._1
 
         private void appBarOkButton_Click(object sender, EventArgs e)
         {
+            var button = sender as Button;
+
+            if (button != null)
+            {
+                // Get a handle for the to-do item bound to the button.
+                PlaceDetails placeForDelete = button.DataContext as PlaceDetails;
+
+                App.ViewModel.DeletePlace(placeForDelete);
+            }
+
+            // Put the focus back to the main page.
+            this.Focus();
+
             /*/ Confirm there is some text in the text box.
             if (newTaskNameTextBox.Text.Length > 0)
             {

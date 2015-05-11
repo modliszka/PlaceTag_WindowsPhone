@@ -71,7 +71,8 @@
                 x:Name="ApplicationTitle" 
                 Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" 
                 Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="all places" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.AppListBoxText, Source={StaticResource LocalizedStrings}}" 
+                       Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
