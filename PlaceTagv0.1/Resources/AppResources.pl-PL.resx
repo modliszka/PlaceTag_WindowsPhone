@@ -122,7 +122,7 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>pl-PL</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
@@ -138,6 +138,6 @@
     <value>all places</value>
   </data>
   <data name="AboutApp" xml:space="preserve">
-    <value>PlaceTag it's application, where you can collect your favourite places.</value>
+    <value>PlaceTag to aplikacja, w której możesz kolekcjonować swoje ulubione miejsca.</value>
   </data>
 </root>

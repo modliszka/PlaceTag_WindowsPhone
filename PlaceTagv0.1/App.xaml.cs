@@ -67,6 +67,13 @@ namespace PlaceTagv0._1
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
+            
+        }
+
+        // Code to execute when the application is launching (eg, from Start)
+        // This code will not execute when the application is reactivated
+        private void Application_Launching(object sender, LaunchingEventArgs e)
+        {
             // Specify the local database connection string.
             string DBConnectionString = "Data Source=isostore:/Places.sdf";
 
@@ -92,12 +99,6 @@ namespace PlaceTagv0._1
             // Query the local database and load observable collections.
             viewModel.LoadCollectionsFromDatabase();
 
-        }
-
-        // Code to execute when the application is launching (eg, from Start)
-        // This code will not execute when the application is reactivated
-        private void Application_Launching(object sender, LaunchingEventArgs e)
-        {
         }
 
         // Code to execute when the application is activated (brought to foreground)

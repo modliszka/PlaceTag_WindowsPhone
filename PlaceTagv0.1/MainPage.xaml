@@ -19,20 +19,23 @@
             <Button Margin="12,0,0,24" BorderThickness="0" Click="place_Click">
                 <Grid HorizontalAlignment="Stretch" Width="420">
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
                         <ColumnDefinition Width="12"/>
                         <ColumnDefinition Width="100"/>
                         <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <CheckBox 
-                    IsChecked="{Binding IsComplete, Mode=TwoWay}" 
-                    Grid.Column="0" VerticalAlignment="Top"/>
-                    <Border Background="Red"/>
-                    <Grid Grid.Column="1" Width="100" Height="100" VerticalAlignment="Top">
+                    <CheckBox Grid.Column="0" 
+                              IsChecked="{Binding IsComplete, Mode=TwoWay}" 
+                              VerticalAlignment="Top"/>
+                    <Border Grid.Column="1"
+                            Background="Red"/>
+                    <Grid Grid.Column="2" 
+                          Width="100" Height="100" VerticalAlignment="Top">
                         <Border BorderBrush="Black" BorderThickness="1" Background="{StaticResource PhoneContrastBackgroundBrush}" Opacity="0.1"/>
                         <Image Source="{Binding Photo}"/>
                     </Grid>
-                    <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0,-6">
+                    <StackPanel Grid.Column="3" 
+                                Orientation="Vertical" Margin="0,-6">
                         <TextBlock Text="{Binding PlaceName}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" MaxHeight="82"/>
                         <!--TextBlock Text="{Binding DefectType}" Style="{StaticResource PhoneTextSubtleStyle}"/-->
                     </StackPanel>
@@ -55,7 +58,13 @@
                 Text="delete" 
                 x:Name="deletePlaceAppBarButton" 
                 Click="deletePlaceBarButton_Click"/>
-            
+
+            <shell:ApplicationBarIconButton                                 
+                IconUri="/Images/questionmark.png" 
+                Text="about" 
+                x:Name="aboutPageAppBarButton" 
+                Click="aboutPageBarButton_Click"/>
+
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 

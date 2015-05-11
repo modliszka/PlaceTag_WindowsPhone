@@ -30,6 +30,17 @@ namespace PlaceTagv0._1.ViewModel
             }
         }
 
+        private PlaceDetails _selectedPlace;
+        public PlaceDetails SelectedPlace
+        {
+            get { return _selectedPlace; }
+            set
+            {
+                _selectedPlace = value;
+                NotifyPropertyChanged("SelectedPlace");
+            }
+        }
+
         // Query database and load the collections and list used by the pivot pages.
         public void LoadCollectionsFromDatabase()
         {

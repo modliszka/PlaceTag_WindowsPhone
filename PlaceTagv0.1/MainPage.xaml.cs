@@ -27,6 +27,13 @@ namespace PlaceTagv0._1
 
         private void place_Click(object sender, EventArgs e)
         {
+            var button = sender as Button;
+            if (button != null)
+            {
+                PlaceDetails selectedPlace = button.DataContext as PlaceDetails;
+                App.ViewModel.SelectedPlace = selectedPlace;
+            }
+
             NavigationService.Navigate(new Uri("/ManagePlaces/GetPlace.xaml", UriKind.Relative));
         }
 
@@ -61,6 +68,11 @@ namespace PlaceTagv0._1
         {
             // Save changes to the database.
             App.ViewModel.SaveChangesToDB();
+        }
+
+        private void aboutPageBarButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/AboutPage.xaml", UriKind.Relative));
         }
 
     }
