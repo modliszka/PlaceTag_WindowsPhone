@@ -16,6 +16,7 @@ namespace PlaceTagv0._1
         public GetPlace()
         {
             InitializeComponent();
+            this.DataContext = App.ViewModel;
         }
 
         private void newPlaceBarButton_Click(object sender, EventArgs e) //routedEventArgs - roznica?
