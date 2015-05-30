@@ -79,6 +79,51 @@ namespace PlaceTagv0._1.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to add.
+        /// </summary>
+        public static string ActionAdd {
+            get {
+                return ResourceManager.GetString("ActionAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cancel.
+        /// </summary>
+        public static string ActionCancel {
+            get {
+                return ResourceManager.GetString("ActionCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to delete.
+        /// </summary>
+        public static string ActionDelete {
+            get {
+                return ResourceManager.GetString("ActionDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to edit.
+        /// </summary>
+        public static string ActionEdit {
+            get {
+                return ResourceManager.GetString("ActionEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to show.
+        /// </summary>
+        public static string ActionShow {
+            get {
+                return ResourceManager.GetString("ActionShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to add place.
         /// </summary>
         public static string AddPageTitle {
@@ -111,6 +156,78 @@ namespace PlaceTagv0._1.Resources {
         public static string AppBarMenuItemText {
             get {
                 return ResourceManager.GetString("AppBarMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to landmarks.
+        /// </summary>
+        public static string AppBarToggleLandmarksButtonText {
+            get {
+                return ResourceManager.GetString("AppBarToggleLandmarksButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to toggle landmarks.
+        /// </summary>
+        public static string AppBarToggleLandmarksMenuItemText {
+            get {
+                return ResourceManager.GetString("AppBarToggleLandmarksMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to location.
+        /// </summary>
+        public static string AppBarToggleLocationButtonText {
+            get {
+                return ResourceManager.GetString("AppBarToggleLocationButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to toggle location.
+        /// </summary>
+        public static string AppBarToggleLocationMenuItemText {
+            get {
+                return ResourceManager.GetString("AppBarToggleLocationMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to zoom in.
+        /// </summary>
+        public static string AppBarZoomInButtonText {
+            get {
+                return ResourceManager.GetString("AppBarZoomInButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to zoom in.
+        /// </summary>
+        public static string AppBarZoomInMenuItemText {
+            get {
+                return ResourceManager.GetString("AppBarZoomInMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to zoom out.
+        /// </summary>
+        public static string AppBarZoomOutButtonText {
+            get {
+                return ResourceManager.GetString("AppBarZoomOutButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to zoom out.
+        /// </summary>
+        public static string AppBarZoomOutMenuItemText {
+            get {
+                return ResourceManager.GetString("AppBarZoomOutMenuItemText", resourceCulture);
             }
         }
         

@@ -15,6 +15,12 @@
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton                                 
+                IconUri="/Images/download.png" 
+                Text="show map" 
+                x:Name="showPlaceAppBarButton" 
+                Click="showPlaceBarButton_Click"/>
+            
             <shell:ApplicationBarIconButton 
                 IconUri="/Images/edit.png" 
                 Text="edit" 

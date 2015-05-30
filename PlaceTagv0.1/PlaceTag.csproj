@@ -124,6 +124,10 @@
     <Compile Include="View\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Map\CoordinateConverter.cs" />
+    <Compile Include="View\ShowMap.xaml.cs">
+      <DependentUpon>ShowMap.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -154,6 +158,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ShowMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -163,7 +171,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -187,14 +194,19 @@
     <Content Include="Images\check.png" />
     <Content Include="Images\delete.png" />
     <Content Include="ImagesOfPlaces\p1.jpg" />
+    <Content Include="Images\download.png" />
     <Content Include="Images\edit.png" />
     <Content Include="Images\feature.email.png" />
+    <Content Include="Images\landmarks.png" />
+    <Content Include="Images\location.png" />
     <Content Include="Images\questionmark.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Check.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Delete.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Select.png" />
+    <Content Include="Images\zoomin.png" />
+    <Content Include="Images\zoomout.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.pl-PL.resx" />
@@ -216,9 +228,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LocalDB\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

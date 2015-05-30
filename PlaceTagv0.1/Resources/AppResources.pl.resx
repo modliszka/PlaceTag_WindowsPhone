@@ -179,4 +179,43 @@
   <data name="PlaceAddressLabel" xml:space="preserve">
     <value>Adres</value>
   </data>
+  <data name="ActionAdd" xml:space="preserve">
+    <value>dodaj</value>
+  </data>
+  <data name="ActionCancel" xml:space="preserve">
+    <value>anuluj</value>
+  </data>
+  <data name="ActionDelete" xml:space="preserve">
+    <value>usuń</value>
+  </data>
+  <data name="ActionEdit" xml:space="preserve">
+    <value>edytuj</value>
+  </data>
+  <data name="ActionShow" xml:space="preserve">
+    <value>pokaż</value>
+  </data>
+  <data name="AppBarToggleLandmarksButtonText" xml:space="preserve">
+    <value>landmarks</value>
+  </data>
+  <data name="AppBarToggleLandmarksMenuItemText" xml:space="preserve">
+    <value>toggle landmarks</value>
+  </data>
+  <data name="AppBarToggleLocationButtonText" xml:space="preserve">
+    <value>lokalizacja</value>
+  </data>
+  <data name="AppBarToggleLocationMenuItemText" xml:space="preserve">
+    <value>toggle location</value>
+  </data>
+  <data name="AppBarZoomInButtonText" xml:space="preserve">
+    <value>przybliż</value>
+  </data>
+  <data name="AppBarZoomInMenuItemText" xml:space="preserve">
+    <value>przybliż</value>
+  </data>
+  <data name="AppBarZoomOutButtonText" xml:space="preserve">
+    <value>oddal</value>
+  </data>
+  <data name="AppBarZoomOutMenuItemText" xml:space="preserve">
+    <value>oddal</value>
+  </data>
 </root>

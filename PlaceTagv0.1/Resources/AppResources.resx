@@ -179,4 +179,43 @@
   <data name="PlaceAddressLabel" xml:space="preserve">
     <value>Address</value>
   </data>
+  <data name="ActionAdd" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="ActionCancel" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="ActionDelete" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="ActionEdit" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="ActionShow" xml:space="preserve">
+    <value>show</value>
+  </data>
+  <data name="AppBarToggleLandmarksButtonText" xml:space="preserve">
+    <value>landmarks</value>
+  </data>
+  <data name="AppBarToggleLandmarksMenuItemText" xml:space="preserve">
+    <value>toggle landmarks</value>
+  </data>
+  <data name="AppBarToggleLocationButtonText" xml:space="preserve">
+    <value>location</value>
+  </data>
+  <data name="AppBarToggleLocationMenuItemText" xml:space="preserve">
+    <value>toggle location</value>
+  </data>
+  <data name="AppBarZoomInButtonText" xml:space="preserve">
+    <value>zoom in</value>
+  </data>
+  <data name="AppBarZoomInMenuItemText" xml:space="preserve">
+    <value>zoom in</value>
+  </data>
+  <data name="AppBarZoomOutButtonText" xml:space="preserve">
+    <value>zoom out</value>
+  </data>
+  <data name="AppBarZoomOutMenuItemText" xml:space="preserve">
+    <value>zoom out</value>
+  </data>
 </root>

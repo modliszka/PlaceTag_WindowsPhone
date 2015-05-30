@@ -27,5 +27,10 @@ namespace PlaceTagv0._1
         {
             NavigationService.Navigate(new Uri("/View/ManagePlaces/DeletePlace.xaml", UriKind.Relative));
         }
+
+        private void showPlaceBarButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/ShowMap.xaml", UriKind.Relative));
+        }
     }
 }
