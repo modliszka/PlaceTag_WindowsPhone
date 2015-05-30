@@ -35,7 +35,7 @@ namespace PlaceTagv0._1
             // Confirm there is some text in the text box.
             if (newPlaceNameTextBox.Text.Length > 0)
             {
-                // Create a new to-do item.
+                // Create a new place.
                 PlaceDetails newPlaceItem = new PlaceDetails
                 {
                     PlaceName = newPlaceNameTextBox.Text,
@@ -46,7 +46,7 @@ namespace PlaceTagv0._1
                     //Category = (ToDoCategory)categoriesListPicker.SelectedItem
                 };
 
-                // Add the item to the ViewModel.
+                // Add the place to the ViewModel.
                 App.ViewModel.AddPlace(newPlaceItem);
 
                 // Return to the main page.

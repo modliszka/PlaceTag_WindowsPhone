@@ -19,7 +19,7 @@ namespace PlaceTagv0._1.ViewModel
             placeDB = new PlaceDataContext(placeDBConnectionString);
         }
 
-        // All to-do items.
+        // All places.
         private ObservableCollection<PlaceDetails> _allPlaces;
         public ObservableCollection<PlaceDetails> AllPlaces
         {
@@ -63,6 +63,25 @@ namespace PlaceTagv0._1.ViewModel
 
             // Add a to-do item to the "all" observable collection.
             AllPlaces.Add(newPlace);
+        }
+
+        // Add a to-do item to the database and collections.
+        public void EditPlace(PlaceDetails editedPlace)
+        {
+            // Add a to-do item to the data context.
+            var place = placeDB.Places.Where(p => p.PlaceId == SelectedPlace.PlaceId).FirstOrDefault();
+
+            place.PlaceName = editedPlace.PlaceName;
+            place.PlaceCity = editedPlace.PlaceCity;
+            place.PlaceStreet = editedPlace.PlaceStreet;
+            place.PlaceStreetNumber = editedPlace.PlaceStreetNumber;
+            place.PlaceDescription = editedPlace.PlaceDescription;
+
+            // Save changes to the database.
+            SaveChangesToDB();
+
+            // Add a to-do item to the "all" observable collection.
+            //AllPlaces.Add(newPlace);
         }
 
         // Remove a to-do task item from the database and collections.

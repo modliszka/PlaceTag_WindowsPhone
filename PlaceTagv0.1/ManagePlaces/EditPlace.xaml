@@ -48,15 +48,31 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
                 <TextBlock Text="Place name" Margin="12,0,0,0"/>
-                <TextBox Text="" Name="name"/>
-                <TextBlock Text="Place description" Margin="12,0,0,0"/>
-                <TextBox Text="" Name="description"/>
+                <TextBox Name="name"
+                         Text="{Binding SelectedPlace.PlaceName}"/>
                 <TextBlock Text="City" Margin="12,0,0,0"/>
-                <TextBox Text="" Name="city"/>
-                <TextBlock Text="Street" Margin="12,0,0,0"/>
-                <TextBox Text="" Name="street"/>
-                <TextBlock Text="Street number" Margin="12,0,0,0"/>
-                <TextBox Text="" Name="streetNumber"/>
+                <TextBox Name="city"
+                         Text="{Binding SelectedPlace.PlaceCity}"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="32*"/>
+                        <ColumnDefinition Width="25*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="66"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Street" Margin="12,0,0,0" Grid.ColumnSpan="2"/>
+                    <TextBox Name="street" Margin="0,0,183,-6" Grid.ColumnSpan="2" Grid.Row="1"
+                             Text="{Binding SelectedPlace.PlaceStreet}"/>
+                    <TextBlock Text="Street number" Margin="38,1,-11,0" Grid.Column="1"/>
+                    <TextBox Name="streetNumber" Margin="38,0,34,-6" Grid.Column="1" Grid.Row="1"
+                             Text="{Binding SelectedPlace.PlaceStreetNumber}"/>
+                </Grid>
+                <TextBlock Text="Place description" Margin="12,0,0,0"/>
+                <TextBox x:Name="description" Height="198" TextWrapping="Wrap"
+                         Text="{Binding SelectedPlace.PlaceDescription}"/>
+                <!--czym sie rozni x:Name od samego Name?-->
             </StackPanel>
         </Grid>
     </Grid>

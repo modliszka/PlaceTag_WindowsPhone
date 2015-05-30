@@ -16,19 +16,38 @@ namespace PlaceTagv0._1
         public EditPlace()
         {
             InitializeComponent();
+
+            // Set the page DataContext property to the ViewModel.
+            this.DataContext = App.ViewModel;
+        }
+
+        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            App.ViewModel.SaveChangesToDB();
         }
 
         private void appBarSaveButton_Click(object sender, EventArgs e)
-        {
-            /*var id = 1;
-            String nam = name.Text;
-            String desc = description.Text;
-            String cit = city.Text;
-            String strt = street.Text;
-            String strtNo = streetNumber.Text;
-            DatabaseUpdate edit = new DatabaseUpdate();
-            if (!String.IsNullOrEmpty(nam) && !String.IsNullOrEmpty(desc))
-                edit.UpdatePlace(id, nam, desc,cit,strt,strtNo);*/
+        {            
+            if (name.Text.Length > 0)
+            {
+                PlaceDetails editedPlace = App.ViewModel.SelectedPlace;
+                editedPlace.PlaceName = name.Text;
+                editedPlace.PlaceCity = city.Text;
+                editedPlace.PlaceStreet = street.Text;
+                editedPlace.PlaceStreetNumber = streetNumber.Text;
+                editedPlace.PlaceDescription = description.Text;
+                
+
+                // Edit the item in the ViewModel.
+                App.ViewModel.EditPlace(editedPlace);
+
+                // Return to the main page.
+                if (NavigationService.CanGoBack)
+                {
+                    NavigationService.GoBack();
+                }
+            }
+
         }
 
         private void appBarCancelButton_Click(object sender, EventArgs e)

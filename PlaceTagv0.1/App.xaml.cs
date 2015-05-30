@@ -11,11 +11,20 @@ using PlaceTagv0._1.Resources;
 // Directives
 using PlaceTagv0._1.Model;
 using PlaceTagv0._1.ViewModel;
+using System.IO;
+using System.Reflection;
+
+// Directive for DatabaseSchemaUpdater
+// Added in Version 2 of the application.
+using Microsoft.Phone.Data.Linq;
 
 namespace PlaceTagv0._1
 {
     public partial class App : Application
     {
+        // The current version of the application.
+        public static int APP_VERSION = 1;
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -74,8 +83,15 @@ namespace PlaceTagv0._1
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            //string startPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);// System.IO.Directory.GetCurrentDirectory();
+            //var filepath = startPath + "\\" + "Database.sdf";
+
             // Specify the local database connection string.
             string DBConnectionString = "Data Source=isostore:/Places.sdf";
+
+            // Create the data context.
+            //string DBConnectionString = "Data Source = 'appdata:/mydb.sdf'; File Mode = read only;";
+            //https://msdn.microsoft.com/en-us/library/windows/apps/hh286411(v=vs.105).aspx
 
             // Create the database if it does not exist.
             using (PlaceDataContext db = new PlaceDataContext(DBConnectionString))
@@ -90,6 +106,28 @@ namespace PlaceTagv0._1
 
                     // Save categories to the database.
                     db.SubmitChanges();
+
+                    // Set the new database version.
+                    DatabaseSchemaUpdater dbUpdater = db.CreateDatabaseSchemaUpdater();
+                    dbUpdater.DatabaseSchemaVersion = APP_VERSION;
+                    dbUpdater.Execute();
+                }
+                else
+                {
+                    // Check whether a database update is needed.
+                    DatabaseSchemaUpdater dbUpdater = db.CreateDatabaseSchemaUpdater();
+
+                    /*if (dbUpdater.DatabaseSchemaVersion < APP_VERSION)
+                    {
+                        // Add the Priority column (added in version 2).
+                        dbUpdater.AddColumn<ToDoItem>("Priority");
+
+                        // Add the new database version.
+                        dbUpdater.DatabaseSchemaVersion = 2;
+
+                        // Perform the database update in a single transaction.
+                        dbUpdater.Execute();
+                    }*/
                 }
             }
 
