@@ -23,6 +23,7 @@ namespace PlaceTagv0._1
         {
             NavigationService.Navigate(new Uri("/View/ManagePlaces/EditPlace.xaml", UriKind.Relative));
         }
+
         private void deletePlaceBarButton_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/View/ManagePlaces/DeletePlace.xaml", UriKind.Relative));
@@ -30,7 +31,15 @@ namespace PlaceTagv0._1
 
         private void showPlaceBarButton_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/View/ShowMap.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/Map/ShowMap.xaml", UriKind.Relative));
+        }
+
+        private void backBarButton_Click(object sender, EventArgs e)
+        {
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
         }
     }
 }

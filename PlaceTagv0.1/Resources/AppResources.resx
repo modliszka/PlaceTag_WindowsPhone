@@ -218,4 +218,7 @@
   <data name="AppBarZoomOutMenuItemText" xml:space="preserve">
     <value>zoom out</value>
   </data>
+  <data name="SearchPageTitle" xml:space="preserve">
+    <value>search places</value>
+  </data>
 </root>

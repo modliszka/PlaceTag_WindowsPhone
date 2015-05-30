@@ -19,7 +19,8 @@
             <Button Margin="12,0,0,24" BorderThickness="0" Click="place_Click">
                 <Grid HorizontalAlignment="Stretch" Width="420">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="5"/>
+                        <!--80-->
                         <ColumnDefinition Width="12"/>
                         <ColumnDefinition Width="100"/>
                         <ColumnDefinition Width="Auto"/>
@@ -52,12 +53,18 @@
                 x:Name="newPlaceAppBarButton" 
                 Click="newPlaceBarButton_Click"/>
 
-            <shell:ApplicationBarIconButton                                 
+            <!--shell:ApplicationBarIconButton                                 
                 IconUri="/Images/delete.png" 
                 Text="delete" 
                 x:Name="deletePlaceAppBarButton" 
-                Click="deletePlaceBarButton_Click"/>
+                Click="deletePlaceBarButton_Click"/-->
 
+            <shell:ApplicationBarIconButton 
+                IconUri="/Images/search.png" 
+                Text="search" 
+                x:Name="searchPlaceAppBarButton" 
+                Click="searchBarButton_Click"/>
+            
             <shell:ApplicationBarIconButton                                 
                 IconUri="/Images/questionmark.png" 
                 Text="about" 

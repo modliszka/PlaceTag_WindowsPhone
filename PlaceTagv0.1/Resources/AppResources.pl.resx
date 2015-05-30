@@ -218,4 +218,7 @@
   <data name="AppBarZoomOutMenuItemText" xml:space="preserve">
     <value>oddal</value>
   </data>
+  <data name="SearchPageTitle" xml:space="preserve">
+    <value>wyszukaj</value>
+  </data>
 </root>

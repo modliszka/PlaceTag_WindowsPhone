@@ -124,8 +124,11 @@
     <Compile Include="View\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ManagePlaces\SearchPlaces.xaml.cs">
+      <DependentUpon>SearchPlaces.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Map\CoordinateConverter.cs" />
-    <Compile Include="View\ShowMap.xaml.cs">
+    <Compile Include="View\Map\ShowMap.xaml.cs">
       <DependentUpon>ShowMap.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -158,7 +161,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ShowMap.xaml">
+    <Page Include="View\ManagePlaces\SearchPlaces.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Map\ShowMap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,6 +197,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\add.png" />
+    <Content Include="Images\back.png" />
     <Content Include="Images\cancel.png" />
     <Content Include="Images\check.png" />
     <Content Include="Images\delete.png" />
@@ -200,6 +208,7 @@
     <Content Include="Images\landmarks.png" />
     <Content Include="Images\location.png" />
     <Content Include="Images\questionmark.png" />
+    <Content Include="Images\search.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Images\Toolkit.Content\ApplicationBar.Check.png" />
