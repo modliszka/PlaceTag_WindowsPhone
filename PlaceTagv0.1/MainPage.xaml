@@ -37,7 +37,6 @@
                     <StackPanel Grid.Column="3" 
                                 Orientation="Vertical" Margin="0,-6">
                         <TextBlock Text="{Binding PlaceName}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" MaxHeight="82"/>
-                        <!--TextBlock Text="{Binding DefectType}" Style="{StaticResource PhoneTextSubtleStyle}"/-->
                     </StackPanel>
                 </Grid>
             </Button>

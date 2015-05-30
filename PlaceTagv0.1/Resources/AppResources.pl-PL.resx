@@ -117,27 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutApp" xml:space="preserve">
+    <value>PlaceTag to aplikacja, w której możesz kolekcjonować swoje ulubione miejsca.</value>
+  </data>
+  <data name="AddPageTitle" xml:space="preserve">
+    <value>dodaj miejsce</value>
+  </data>
+  <data name="AppBarButtonText" xml:space="preserve">
+    <value>dodaj</value>
+  </data>
+  <data name="AppBarMenuItemText" xml:space="preserve">
+    <value>Menu Item</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>PlaceTag</value>
+  </data>
+  <data name="AppListBoxText" xml:space="preserve">
+    <value>Wszystkie tagi</value>
+  </data>
+  <data name="EditPageTitle" xml:space="preserve">
+    <value>edytuj miejsce</value>
+  </data>
+  <data name="PlaceCityLabel" xml:space="preserve">
+    <value>Miejscowość</value>
+  </data>
+  <data name="PlaceDescription" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="PlaceNameLabel" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="PlaceStreetLabel" xml:space="preserve">
+    <value>Ulica</value>
+  </data>
+  <data name="PlaceStreetNumberLabel" xml:space="preserve">
+    <value>Numer ulicy</value>
+  </data>
   <data name="ResourceFlowDirection" xml:space="preserve">
     <value>LeftToRight</value>
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>pl-PL</value>
+    <value>pl</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
-  <data name="ApplicationTitle" xml:space="preserve">
-    <value>PlaceTag</value>
+  <data name="DeletePageStatement" xml:space="preserve">
+    <value>Na pewno chcesz usunąć to miejsce?</value>
   </data>
-  <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+  <data name="DeletePageTitle" xml:space="preserve">
+    <value>usuń miejsce</value>
   </data>
-  <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+  <data name="AboutAppPageTitle" xml:space="preserve">
+    <value>about</value>
   </data>
-  <data name="AppListBoxText" xml:space="preserve">
-    <value>all places</value>
+  <data name="AppAuthor" xml:space="preserve">
+    <value>Autor</value>
   </data>
-  <data name="AboutApp" xml:space="preserve">
-    <value>PlaceTag to aplikacja, w której możesz kolekcjonować swoje ulubione miejsca.</value>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Wersja</value>
+  </data>
+  <data name="PlaceAddressLabel" xml:space="preserve">
+    <value>Adres</value>
   </data>
 </root>

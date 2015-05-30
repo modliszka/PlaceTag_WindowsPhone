@@ -44,24 +44,24 @@ namespace PlaceTagv0._1.ViewModel
         // Query database and load the collections and list used by the pivot pages.
         public void LoadCollectionsFromDatabase()
         {
-            // Specify the query for all to-do items in the database.
+            // Specify the query for all places in the database.
             var placesInDB = from PlaceDetails place in placeDB.Places
                                 select place;
 
-            // Query the database and load all to-do items.
+            // Query the database and load all places.
             AllPlaces = new ObservableCollection<PlaceDetails>(placesInDB);
         }
 
-        // Add a to-do item to the database and collections.
+        // Add a place to the database and collections.
         public void AddPlace(PlaceDetails newPlace)
         {
-            // Add a to-do item to the data context.
+            // Add a place to the data context.
             placeDB.Places.InsertOnSubmit(newPlace);
 
             // Save changes to the database.
             SaveChangesToDB();
 
-            // Add a to-do item to the "all" observable collection.
+            // Add a place to the "all" observable collection.
             AllPlaces.Add(newPlace);
         }
 
@@ -79,9 +79,6 @@ namespace PlaceTagv0._1.ViewModel
 
             // Save changes to the database.
             SaveChangesToDB();
-
-            // Add a to-do item to the "all" observable collection.
-            //AllPlaces.Add(newPlace);
         }
 
         // Remove a to-do task item from the database and collections.

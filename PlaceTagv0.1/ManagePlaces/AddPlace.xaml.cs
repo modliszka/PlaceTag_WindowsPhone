@@ -23,15 +23,6 @@ namespace PlaceTagv0._1
 
         private void appBarAddButton_Click(object sender, EventArgs e)
         {
-            /*String nam = name.Text;
-            String desc = description.Text;
-            String cit = city.Text;
-            String strt = street.Text;
-            String strtNo = streetNumber.Text;
-            DatabaseAdd add = new DatabaseAdd();
-            if (!String.IsNullOrEmpty(nam) && !String.IsNullOrEmpty(desc))
-                add.AddPlace(nam, desc,cit,strt,strtNo);*/
-
             // Confirm there is some text in the text box.
             if (newPlaceNameTextBox.Text.Length > 0)
             {
@@ -55,7 +46,6 @@ namespace PlaceTagv0._1
                     NavigationService.GoBack();
                 }
             }
-
         }
 
         private void appBarCancelButton_Click(object sender, EventArgs e)

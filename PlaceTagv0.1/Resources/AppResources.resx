@@ -140,4 +140,43 @@
   <data name="AboutApp" xml:space="preserve">
     <value>PlaceTag it's application, where you can collect your favourite places.</value>
   </data>
+  <data name="AddPageTitle" xml:space="preserve">
+    <value>add place</value>
+  </data>
+  <data name="EditPageTitle" xml:space="preserve">
+    <value>edit place</value>
+  </data>
+  <data name="PlaceCityLabel" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="PlaceDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="PlaceNameLabel" xml:space="preserve">
+    <value>Place name</value>
+  </data>
+  <data name="PlaceStreetLabel" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="PlaceStreetNumberLabel" xml:space="preserve">
+    <value>Street number</value>
+  </data>
+  <data name="DeletePageStatement" xml:space="preserve">
+    <value>Are you sure to delete this place?</value>
+  </data>
+  <data name="DeletePageTitle" xml:space="preserve">
+    <value>delete place</value>
+  </data>
+  <data name="AboutAppPageTitle" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="AppAuthor" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="PlaceAddressLabel" xml:space="preserve">
+    <value>Address</value>
+  </data>
 </root>

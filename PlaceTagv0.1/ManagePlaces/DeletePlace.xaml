@@ -41,14 +41,14 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="PlaceTagv0.1" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="delete place" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.DeletePageTitle, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,200,12,0">
             <StackPanel>
-                <TextBlock Text="Are you sure to delete this place?" Margin="12,0,0,0"/>
+                <TextBlock Text="{Binding Path=LocalizedResources.DeletePageStatement, Source={StaticResource LocalizedStrings}}" Margin="12,0,0,0"/>
             </StackPanel>
         </Grid>
     </Grid>

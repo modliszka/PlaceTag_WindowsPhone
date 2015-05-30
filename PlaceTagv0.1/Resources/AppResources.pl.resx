@@ -137,4 +137,46 @@
   <data name="AppListBoxText" xml:space="preserve">
     <value>Wszystkie tagi</value>
   </data>
+  <data name="AboutApp" xml:space="preserve">
+    <value>PlaceTag to aplikacja, w której możesz kolekcjonować swoje ulubione miejsca.</value>
+  </data>
+  <data name="AddPageTitle" xml:space="preserve">
+    <value>dodaj miejsce</value>
+  </data>
+  <data name="EditPageTitle" xml:space="preserve">
+    <value>edytuj miejsce</value>
+  </data>
+  <data name="PlaceCityLabel" xml:space="preserve">
+    <value>Miejscowość</value>
+  </data>
+  <data name="PlaceDescription" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="PlaceNameLabel" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="PlaceStreetLabel" xml:space="preserve">
+    <value>Ulica</value>
+  </data>
+  <data name="PlaceStreetNumberLabel" xml:space="preserve">
+    <value>Numer ulicy</value>
+  </data>
+  <data name="DeletePageStatement" xml:space="preserve">
+    <value>Na pewno chcesz usunąć to miejsce?</value>
+  </data>
+  <data name="DeletePageTitle" xml:space="preserve">
+    <value>usuń miejsce</value>
+  </data>
+  <data name="AboutAppPageTitle" xml:space="preserve">
+    <value>O aplikacji</value>
+  </data>
+  <data name="AppAuthor" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Wersja</value>
+  </data>
+  <data name="PlaceAddressLabel" xml:space="preserve">
+    <value>Adres</value>
+  </data>
 </root>

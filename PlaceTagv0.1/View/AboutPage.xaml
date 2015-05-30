@@ -22,17 +22,17 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="About" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.AboutAppPageTitle, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock TextWrapping="Wrap" 
                        Text="{Binding Path=LocalizedResources.AboutApp, Source={StaticResource LocalizedStrings}}"/>
-            <TextBlock Text="Autor" Margin="0,57,0,-57"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.AppAuthor, Source={StaticResource LocalizedStrings}}" Margin="0,57,0,-57"/>
             <TextBlock Text="Monika Piątkowska" Margin="10,79,-10,-79"/>
-            <TextBlock Text="Wersja" Margin="0,101,0,-101"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.AppVersion, Source={StaticResource LocalizedStrings}}" Margin="0,101,0,-101"/>
             <TextBlock Text="0.2.511" Margin="10,123,-10,-123"/>
             <Button Margin="308.127,44.023,0,0" VerticalAlignment="Top" 
                     Height="77.111" Width="94.494"

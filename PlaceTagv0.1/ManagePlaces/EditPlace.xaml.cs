@@ -35,10 +35,9 @@ namespace PlaceTagv0._1
                 editedPlace.PlaceCity = city.Text;
                 editedPlace.PlaceStreet = street.Text;
                 editedPlace.PlaceStreetNumber = streetNumber.Text;
-                editedPlace.PlaceDescription = description.Text;
-                
+                editedPlace.PlaceDescription = description.Text;                
 
-                // Edit the item in the ViewModel.
+                // Edit the place in the ViewModel.
                 App.ViewModel.EditPlace(editedPlace);
 
                 // Return to the main page.
@@ -47,7 +46,6 @@ namespace PlaceTagv0._1
                     NavigationService.GoBack();
                 }
             }
-
         }
 
         private void appBarCancelButton_Click(object sender, EventArgs e)

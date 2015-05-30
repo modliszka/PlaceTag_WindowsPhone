@@ -4,8 +4,10 @@
   <Languages xmlns="">
     <Language code="pl-PL" />
     <Language code="pl" />
+    <Language code="en" />
+    <Language code="en-US" />
   </Languages>
-  <App xmlns="" ProductID="{fbb49496-2a6c-4167-8c65-51416011922f}" Title="PlaceTagv0._1" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PlaceTagv0._1 author" Description="Sample description" Publisher="PlaceTagv0._1" PublisherID="{ff8701f2-de54-4f24-8f02-3eddca67db6c}">
+  <App xmlns="" ProductID="{fbb49496-2a6c-4167-8c65-51416011922f}" Title="PlaceTag" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Monika Piątkowska" Description="Sample description" Publisher="PlaceTagv0._1" PublisherID="{ff8701f2-de54-4f24-8f02-3eddca67db6c}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -24,11 +26,16 @@
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
           <Title>PlaceTagv0._1</Title>
-          <BackContent></BackContent>
-          <BackBackgroundImageURI></BackBackgroundImageURI>
-          <BackTitle></BackTitle>
-          <DeviceLockImageURI></DeviceLockImageURI>
-          <HasLarge></HasLarge>
+          <BackContent>
+          </BackContent>
+          <BackBackgroundImageURI>
+          </BackBackgroundImageURI>
+          <BackTitle>
+          </BackTitle>
+          <DeviceLockImageURI>
+          </DeviceLockImageURI>
+          <HasLarge>
+          </HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
