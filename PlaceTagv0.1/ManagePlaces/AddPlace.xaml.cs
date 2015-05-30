@@ -39,6 +39,10 @@ namespace PlaceTagv0._1
                 PlaceDetails newPlaceItem = new PlaceDetails
                 {
                     PlaceName = newPlaceNameTextBox.Text,
+                    PlaceCity = city.Text,
+                    PlaceStreet = street.Text,
+                    PlaceStreetNumber = streetNumber.Text,
+                    PlaceDescription = description.Text
                     //Category = (ToDoCategory)categoriesListPicker.SelectedItem
                 };
 

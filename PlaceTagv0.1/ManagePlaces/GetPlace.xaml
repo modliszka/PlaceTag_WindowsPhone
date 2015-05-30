@@ -48,18 +48,18 @@
                 <TextBlock Text="{Binding SelectedPlace.PlaceName}" 
                            TextWrapping="Wrap"
                            Margin="12,0,0,20"
-                           FontSize="40"
-                           />
-                <TextBlock TextWrapping="Wrap" 
-                           Text="Place description bla bla bla bla bla bla bal ba l balbla bal bal" Margin="12,0,0,0"/>
-                <TextBlock Text="City" 
+                           FontSize="40"/>
+                <TextBlock Text="{Binding SelectedPlace.PlaceCity}" 
                            TextWrapping="Wrap"
                            Margin="12,0,0,0"/>
-                <TextBlock Text="Street" 
-                           TextWrapping="Wrap"
-                           Margin="12,0,0,0"/>
-                <TextBlock Text="Street number" 
-                           TextWrapping="Wrap"
+                <TextBlock TextWrapping="Wrap"
+                           Margin="12,0,0,0">
+                           <Run Text="{Binding SelectedPlace.PlaceStreet}"/>
+                           <Run Text=" "/>
+                           <Run Text="{Binding SelectedPlace.PlaceStreetNumber}"/>                            
+                </TextBlock>
+                <TextBlock Text="{Binding SelectedPlace.PlaceDescription}" 
+                           TextWrapping="Wrap" 
                            Margin="12,0,0,0"/>
             </StackPanel>
         </Grid>

@@ -50,7 +50,6 @@ public class PlaceDetails : INotifyPropertyChanged, INotifyPropertyChanging
 
 
     private string _placeName;
-
     [Column]
     public string PlaceName
     {
@@ -70,14 +69,73 @@ public class PlaceDetails : INotifyPropertyChanged, INotifyPropertyChanging
     public int lat { get; set; }
     [Column]
     public int lon { get; set; }
+
+    private string _placeCity;
     [Column]
-    public string place_city { get; set; }
+    public string PlaceCity
+    {
+        get { return _placeCity; }
+        set
+        {
+            if (_placeCity != value)
+            {
+                NotifyPropertyChanging("PlaceCity");
+                _placeCity = value;
+                NotifyPropertyChanged("PlaceCity");
+            }
+        }
+    }
+
+
+    private string _placeStreet;
     [Column]
-    public string place_street { get; set; }
+    public string PlaceStreet
+    {
+        get { return _placeStreet; }
+        set
+        {
+            if (_placeStreet != value)
+            {
+                NotifyPropertyChanging("PlaceStreet");
+                _placeStreet = value;
+                NotifyPropertyChanged("PlaceStreet");
+            }
+        }
+    }
+
+
+    private string _placeStreetNumber;
     [Column]
-    public string place_house_number { get; set; }
+    public string PlaceStreetNumber
+    {
+        get { return _placeStreetNumber; }
+        set
+        {
+            if (_placeStreetNumber != value)
+            {
+                NotifyPropertyChanging("PlaceStreetNumber");
+                _placeStreetNumber = value;
+                NotifyPropertyChanged("PlaceStreetNumber");
+            }
+        }
+    }
+
+
+    private string _placeDescription;
     [Column]
-    public string place_description { get; set; }
+    public string PlaceDescription
+    {
+        get { return _placeDescription; }
+        set
+        {
+            if (_placeDescription != value)
+            {
+                NotifyPropertyChanging("PlaceDescription");
+                _placeDescription = value;
+                NotifyPropertyChanged("PlaceDescription");
+            }
+        }
+    }
 
     //The Binary version column, with the [Column(IsVersion = true)] attribute, significantly improves table update performance.
     // Version column aids update performance.
