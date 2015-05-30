@@ -21,11 +21,11 @@ namespace PlaceTagv0._1
 
         private void newPlaceBarButton_Click(object sender, EventArgs e) //routedEventArgs - roznica?
         {
-            NavigationService.Navigate(new Uri("/ManagePlaces/EditPlace.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/ManagePlaces/EditPlace.xaml", UriKind.Relative));
         }
         private void deletePlaceBarButton_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ManagePlaces/DeletePlace.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/ManagePlaces/DeletePlace.xaml", UriKind.Relative));
         }
     }
 }

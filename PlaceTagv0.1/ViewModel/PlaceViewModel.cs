@@ -82,10 +82,10 @@ namespace PlaceTagv0._1.ViewModel
         }
 
         // Remove a to-do task item from the database and collections.
-        public void DeletePlace(PlaceDetails placeForDelete) {
-            // Remove the to-do item from the "all" observable collection.
+        public void DeletePlace(PlaceDetails placeForDelete)
+        {
+            // Remove a place from the "all" observable collection.
             AllPlaces.Remove(placeForDelete);
-
             // Remove the to-do item from the data context.
             placeDB.Places.DeleteOnSubmit(placeForDelete);
 

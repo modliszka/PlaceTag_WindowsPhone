@@ -34,17 +34,17 @@ namespace PlaceTagv0._1
                 App.ViewModel.SelectedPlace = selectedPlace;
             }
 
-            NavigationService.Navigate(new Uri("/ManagePlaces/GetPlace.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/ManagePlaces/GetPlace.xaml", UriKind.Relative));
         }
 
         private void newPlaceBarButton_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ManagePlaces/AddPlace.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/ManagePlaces/AddPlace.xaml", UriKind.Relative));
         }
 
         private void deletePlaceBarButton_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ManagePlaces/DeletePlace.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/ManagePlaces/DeletePlace.xaml", UriKind.Relative));
 
             /*
              // Cast the parameter as a button.

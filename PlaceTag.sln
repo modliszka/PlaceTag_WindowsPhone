@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceTagv0.1", "PlaceTagv0.1\PlaceTagv0.1.csproj", "{FBB49496-2A6C-4167-8C65-51416011922F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceTag", "PlaceTagv0.1\PlaceTag.csproj", "{FBB49496-2A6C-4167-8C65-51416011922F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
